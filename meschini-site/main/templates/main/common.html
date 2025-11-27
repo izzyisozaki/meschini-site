@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <!-- Mobile-friendly viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sito di ricerca lavoro</title>
+    <style>
+    * {
+        margin: auto;
+        padding: 0;
+        box-sizing: border-box; }
+
+    body {
+        color: #085F63;
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4; }
+
+    header {
+        background: #085F63;
+        color: #ffffff;
+        padding: 10px ; }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        padding: 0; }
+
+    nav li {
+        margin: 0 16px; }
+
+    nav a {
+        color: white;
+        text-decoration: none; }
+
+    main
+        { padding: 20px; }
+
+    #laborit {
+        color: transparent;
+        background: linear-gradient(to right, #085F63 80%, rgba(0, 0, 0, 0.1) 100%);
+        background-clip: text;
+    }
+
+    #laborit-header {
+        color: transparent;
+        background: linear-gradient(to right, #ffffff 80%, rgba(0, 0, 0, 0.1) 100%);
+        background-clip: text;
+    }
+
+    .cards {
+        justify-content: center;
+        gap: 24px;
+        margin-bottom: 30px; }
+
+    .cards-aziende {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px; }
+
+    .card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 16px;
+        width: 300px;
+        text-align: center; }
+
+    .card-benvenuto-contenuto {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 16px;
+        width: 300px;
+        text-align: center;
+        margin-bottom: 30px; }
+
+    .card-benvenuto-contenuto h2 {
+        font-size: 27px;
+        margin-bottom: 15px; }
+
+    .card-azienda {
+        font: #085F63;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 16px;
+        width: 300px; }
+
+    .card h2 {
+        font-size: 24px;
+        margin-bottom: 8px; }
+
+    .card p {
+        margin-bottom: 16px; }
+
+    .card button {
+        background: #49BEB7;
+        color: white;
+        font-size: 15px;
+        border: 2px solid #49BEB7;
+        padding: 10px 16px;
+        border-radius: 4px;
+        cursor: pointer; }
+
+    .card-benvenuto-contenuto button {
+        margin-top: 30px;
+        background: #49BEB7;
+        color: #085F63;
+        font-size: 15px;
+        border: 2px solid #49BEB7;
+        padding: 10px 16px;
+        border-radius: 4px;
+        cursor: pointer; }
+
+    .card-benvenuto-contenuto button:hover {
+        color: white;
+        border: 2px solid #085F63;
+        background: #37A9A3; }
+
+    footer {
+        position: relative;
+        background: #085F63;
+        color: white;
+        text-align: center;
+        padding: 24px;
+        margin-top: 32px;
+    }
+
+    /* Responsive Styles */
+
+    /* Breakpoint per smartphone, fino a 576px */
+
+    @media (max-width: 576) {
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav li {
+            margin: 8 px 0;
+
+        }
+
+        .cards {
+            width: 100%;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+    }
+
+    /* Breakpoint per tablet, da 577px a 768px */
+
+    @media (min-width: 577px) and (max-width: 768px) {
+        .cards {
+            justify-content: space-around;
+        }
+
+        .card {
+            justify-content: center;
+        }
+    }
+
+    /* Breakpoint per schermi grandi, da 993px */
+
+    @media (min-width: 993px) {
+        .cards {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    }
+
+    </style>
+
+    <!-- GSAP -->
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+    <h1><span id="laborit-header">LABORIT</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Area Candidati</a></li>
+                    <li><a href="#">Area Aziende</a></li>
+                    <li><a href="#">Contatti</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+        <div class="footer-sections">
+            <div class="footer-section">
+                <h3>JobMeschini</h3>
+                <p>La piattaforma di ricerca lavoro dell'Istituto Meschini. Collegamento diretto tra aziende e talenti.
+                </p>
+                <div class="social-links">
+                    <a href="" title="Facebook">📘</a>
+                    <a href="" title="LinkedIn">💼</a>
+                    <a href="" title="Instagram">📷</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Link Utili</h3>
+                <ul class="footer-links">
+                    <li><a href="">Chi Siamo</a></li>
+                    <li><a href="">Contatti</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Termini di Servizio</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contatti</h3>
+                <p>📧 info@jobmeschini.it</p>
+                <p>📞 06 7049 2085</p>
+                <p>📍 Via Cernaia 55, Roma</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Laborit - Istituto Meschini. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
