@@ -212,13 +212,15 @@
             </div>
 
             <div class="footer-section">
-                <h3>Link Utili</h3>
-                <ul class="footer-links">
-                    <li><a href="">Chi Siamo</a></li>
-                    <li><a href="">Contatti</a></li>
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Termini di Servizio</a></li>
-                </ul>
+                <button onclick="TestsFunction()"><h3>Link Utili</h3></button>
+                <div id="TestsDiv" style="display:none">
+                    <ul class="footer-links">
+                        <li><a href="">Chi Siamo</a></li>
+                        <li><a href="">Contatti</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Termini di Servizio</a></li>
+                    </ul>
+                </div>
             </div>
 
             <div class="footer-section">
@@ -233,6 +235,11 @@
             <p>&copy; 2025 Laborit - Istituto Meschini. Tutti i diritti riservati.</p>
         </div>
     </footer>
-
+    <script>
+        function TestsFunction() {
+        var T = document.getElementById("TestsDiv");
+        T.style.display = "block";  // <-- Set it to block
+        }
+    </script>
 </body>
 </html>
