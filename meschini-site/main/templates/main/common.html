@@ -212,22 +212,24 @@
             </div>
 
             <div class="footer-section">
-                <button onclick="TestsFunction()"><h3>Link Utili</h3></button>
-                <div id="TestsDiv" style="display:none">
+                <button onclick="LinksFunction()"><h3>Link Utili</h3></button>
+                <div id="LinksDiv" style="display:none">
                     <ul class="footer-links">
-                        <li><a href="">Chi Siamo</a></li>
-                        <li><a href="">Contatti</a></li>
-                        <li><a href="">Privacy Policy</a></li>
-                        <li><a href="">Termini di Servizio</a></li>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Aree Aziende</a></li>
+                        <li><a href="">Aree candidati</a></li>
+                        <li><a href="">Afflliati</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-section">
-                <h3>Contatti</h3>
+                <button onclick="ContattiFunction()"><h3>Contatti</h3></button>
+                <div id="ContattiDiv" style="display:none">
                 <p>📧 info@jobmeschini.it</p>
                 <p>📞 06 7049 2085</p>
                 <p>📍 Via Cernaia 55, Roma</p>
+                </div>
             </div>
         </div>
 
@@ -236,10 +238,37 @@
         </div>
     </footer>
     <script>
-        function TestsFunction() {
-        var T = document.getElementById("TestsDiv");
-        T.style.display = "block";  // <-- Set it to block
+        function LinksFunction() {
+            const div = document.getElementById("LinksDiv");
+
+            if (div.style.display === "none" || div.style.display === "") {
+                div.style.display = "block"; // open
+            } else {
+                div.style.display = "none";  // close
+            }
         }
+
+        function ContattiFunction() {
+            const div = document.getElementById("ContattiDiv");
+
+            if (div.style.display === "none" || div.style.display === "") {
+                div.style.display = "block";
+                localStorage.setItem("footerOpen", "true");
+            } else {
+                div.style.display = "none";
+                localStorage.setItem("footerOpen", "false");
+            }
+        }
+
+        // Load saved state on page load
+        window.onload = function() {
+            const div = document.getElementById("ContattiDiv");
+            const savedState = localStorage.getItem("footerOpen");
+
+            if (savedState === "true") {
+                div.style.display = "block";
+            }
+        };
     </script>
 </body>
 </html>
