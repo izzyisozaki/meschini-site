@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sito di ricerca lavoro</title>
+    <style>
+    * {
+        margin: auto;
+        padding: 0;
+        box-sizing: border-box; }
+
+    body {
+        color: #085F63;
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4; }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        padding: 0; }
+
+    nav li {
+        margin: 0 16px; }
+
+    nav a {
+        color: white;
+        text-decoration: none; }
+
+    main
+        { padding: 20px; }
+
+    #laborit {
+        color: transparent;
+        background: linear-gradient(to right, #085F63 80%, rgba(0, 0, 0, 0.1) 100%);
+        background-clip: text;
+    }
+
+    .cards {
+        justify-content: center;
+        gap: 24px;
+        margin-bottom: 30px; }
+
+    .cards-aziende {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px; }
+
+    .card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 16px;
+        width: 300px;
+        text-align: center; }
+
+    .card-benvenuto-contenuto {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 16px;
+        width: 300px;
+        text-align: center;
+        margin-bottom: 30px; }
+
+    .card-benvenuto-contenuto h2 {
+        font-size: 27px;
+        margin-bottom: 15px; }
+
+    .card-azienda {
+        font: #085F63;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 16px;
+        width: 300px; }
+
+    .card h2 {
+        font-size: 24px;
+        margin-bottom: 8px; }
+
+    .card p {
+        margin-bottom: 16px; }
+
+    .card button {
+        background: #49BEB7;
+        color: white;
+        font-size: 15px;
+        border: 2px solid #49BEB7;
+        padding: 10px 16px;
+        border-radius: 4px;
+        cursor: pointer; }
+
+    .card-benvenuto-contenuto button {
+        margin-top: 30px;
+        background: #49BEB7;
+        color: #085F63;
+        font-size: 15px;
+        border: 2px solid #49BEB7;
+        padding: 10px 16px;
+        border-radius: 4px;
+        cursor: pointer; }
+
+    .card-benvenuto-contenuto button:hover {
+        color: white;
+        border: 2px solid #085F63;
+        background: #37A9A3; }
+
+    /* Responsive Styles */
+
+    /* Breakpoint per smartphone, fino a 576px */
+
+    @media (max-width: 576) {
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav li {
+            margin: 8 px 0;
+
+        }
+
+        .cards {
+            width: 100%;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+    }
+
+    /* Breakpoint per tablet, da 577px a 768px */
+
+    @media (min-width: 577px) and (max-width: 768px) {
+        .cards {
+            justify-content: space-around;
+        }
+
+        .card {
+            justify-content: center;
+        }
+    }
+
+    /* Breakpoint per schermi grandi, da 993px */
+
+    @media (min-width: 993px) {
+        .cards {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+    <h1><span id="laborit-header">LABORIT</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Area Candidati</a></li>
+                    <li><a href="#">Area Aziende</a></li>
+                    <li><a href="#">Contatti</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="cards">
+                <section class="card-benvenuto">
+                    <div class="card-benvenuto-contenuto">
+                        <h2>Benvenuto su <span id="laborit">LABORIT</span></h2>
+                        <p>Il tuo punto di riferimento per trovare lavoro. Esplora le nostre offerte lavorative e candidati facilmente.</p>
+                        <button>INIZIA ORA</button>
+                    </div>
+                </section>
+                <section class="cards-aziende">
+                        <div class="card-azienda">
+                            <h2>Azienda 1</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec mollis. Quisque convallis libero in sapien pharetra tincidunt. Aliquam elit ante, malesuada id, tempor eu, gravida id, odio. Maecenas suscipit, risus et eleifend imperdiet, nisi orci ullamcorper massa, et adipiscing orci velit quis magna.</p>
+                            <button>Scopri di più</button>
+                        </div>
+                        <div class="card-azienda">
+                            <h2>Azienda 2</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec mollis. Quisque convallis libero in sapien pharetra tincidunt. Aliquam elit ante, malesuada id, tempor eu, gravida id, odio. Maecenas suscipit, risus et eleifend imperdiet, nisi orci ullamcorper massa, et adipiscing orci velit quis magna.</p>
+                            <button>Scopri di più</button>
+                        </div>
+                        <div class="card-azienda">
+                            <h2>Azienda 3</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec mollis. Quisque convallis libero in sapien pharetra tincidunt. Aliquam elit ante, malesuada id, tempor eu, gravida id, odio. Maecenas suscipit, risus et eleifend imperdiet, nisi orci ullamcorper massa, et adipiscing orci velit quis magna.</p>
+                            <button>Scopri di più</button>
+                </section>
+            </section>
+        </main>
+        
+    <script></script>
+    </body>
+</html>
