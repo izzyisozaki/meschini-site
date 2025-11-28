@@ -11,4 +11,7 @@ def contatti(request):
 def chisiamo(request):
     return render(request, 'main/chi_siamo.html')
 
+def offerte(request):
+    return render(request,'main/offerte.html')
+
 

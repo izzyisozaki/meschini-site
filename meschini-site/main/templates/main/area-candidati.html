@@ -1,5 +1,56 @@
 {% extends 'main/common.html' %}
 {% block content %}
+<style>
+    .cards {
+        justify-content: center;
+        gap: 24px;
+        margin-bottom: 30px;
+    }
+
+    .cards-candidati {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 16px;
+        width: 300px;
+        text-align: center;
+    }
+
+    .card-candidato {
+        font: #085F63;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 16px;
+        width: 300px;
+    }
+
+    .card h2 {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .card p {
+        margin-bottom: 16px;
+    }
+
+    .card button {
+        background: #49BEB7;
+        color: white;
+        font-size: 15px;
+        border: 2px solid #49BEB7;
+        padding: 10px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+</style>
         <main>
             <section class="cards">
                 <section class="card-benvenuto">
@@ -7,18 +58,18 @@
                         <h2>I Candidati</h2>
                     </div>
                 </section>
-                <section class="cards-aziende">
-                        <div class="card-azienda">
+                <section class="cards-candidati">
+                        <div class="card-candidato">
                             <h2>Candidato 1</h2>
                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec mollis. Quisque convallis libero in sapien pharetra tincidunt. Aliquam elit ante, malesuada id, tempor eu, gravida id, odio. Maecenas suscipit, risus et eleifend imperdiet, nisi orci ullamcorper massa, et adipiscing orci velit quis magna.</p>
                             <button>Scopri di più</button>
                         </div>
-                        <div class="card-azienda">
+                        <div class="card-candidati">
                             <h2>Candidato 2</h2>
                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec mollis. Quisque convallis libero in sapien pharetra tincidunt. Aliquam elit ante, malesuada id, tempor eu, gravida id, odio. Maecenas suscipit, risus et eleifend imperdiet, nisi orci ullamcorper massa, et adipiscing orci velit quis magna.</p>
                             <button>Scopri di più</button>
                         </div>
-                        <div class="card-azienda">
+                        <div class="card-candidati">
                             <h2>Candidato 3</h2>
                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec mollis. Quisque convallis libero in sapien pharetra tincidunt. Aliquam elit ante, malesuada id, tempor eu, gravida id, odio. Maecenas suscipit, risus et eleifend imperdiet, nisi orci ullamcorper massa, et adipiscing orci velit quis magna.</p>
                             <button>Scopri di più</button>
