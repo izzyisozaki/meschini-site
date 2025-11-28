@@ -7,11 +7,14 @@ from .models import *
 
 def contatti(request):
     return render(request, 'main/contatti.html')
+
+def areaAziende(request):
+    return render(request, 'main/area-aziende.html')
     
-def chisiamo(request):
-    return render(request, 'main/chi_siamo.html')
+def areaCandidati(request):
+    return render(request, 'main/area-candidati.html')
 
 def offerte(request):
-    return render(request,'main/offerte.html')
+    return render(request,'main/offerte-di-lavoro.html')
 
 
